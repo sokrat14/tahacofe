@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page à propos de notre entreprise. Découvrez notre équipe et notre mission.">
+    <title>À propos de nous</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <STYle>
+      /* Reset des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #584f4f;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #685105;
+    color: #e4e4e4;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 2rem 4rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+#our-mission p {
+    color: #6f4f1f; /* Couleur café */
+}
+
+#our-team .team-members {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    width: 30%;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
+}
+
+    </STYle>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Notre Entreprise</h1>
+            </div>
+            <ul>
+            
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-us">
+        <div class="container">
+            <h2>Qui sommes-nous ?</h2>
+            <p>Notre entreprise a été fondée avec l'idée de révolutionner l'industrie du café en offrant des produits de qualité supérieure, un service irréprochable et une expérience caféinée unique. Nous croyons que chaque tasse de café doit être une aventure de saveurs et un moment de plaisir.</p>
+        </div>
+    </section>
+
+    <section id="our-mission" class="section">
+        <div class="container">
+            <h2>Notre Mission</h2>
+            <p>Nous nous engageons à offrir à nos clients le meilleur café possible, avec un engagement envers la durabilité et le commerce équitable. Chaque grain de café que nous vendons est soigneusement sélectionné et torréfié pour garantir une saveur exceptionnelle.</p>
+        </div>
+    </section>
+
+    <section id="our-team" class="section">
+        <div class="container">
+            <h2>Rencontrez notre équipe</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="../IMAGE/client_1-scaled.jpg" alt="Membre de l'équipe 1">
+                    <h3>Jean Dupont</h3>
+                    <p>Directeur général - Passionné de café, Jean est le fondateur de notre entreprise.</p>
+                </div>
+                <div class="team-member">
+                    <img src="../IMAGE/marie-lemoine.256x256.jpg" alt="Membre de l'équipe 2">
+                    <h3>Marie Lemoine</h3>
+                    <p>Responsable marketing - Marie est en charge de toutes nos campagnes publicitaires et événements.</p>
+                </div>
+                <div class="team-member">
+                    <img src="../IMAGE/images.jpeg" alt="Membre de l'équipe 3">
+                    <h3>Ahmed Ben Ali</h3>
+                    <p>Chef torréfacteur - Ahmed sélectionne les meilleurs grains de café et veille à leur torréfaction parfaite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Notre Entreprise. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+

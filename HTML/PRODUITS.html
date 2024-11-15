@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits de Café</title>
+    <link rel="stylesheet" href="styles.css">
+    <STYle>
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230408/pngtree-coffee-beans-leaves-beans-background-image_2177928.jpg'); /* Remplacer par le chemin de votre image */
+    background-size: cover; /* L'image couvre toute la page */
+    background-position: center center; /* L'image est centrée */
+    background-attachment: fixed; /* L'image reste fixe lors du défilement */
+    color: white; /* Couleur du texte par défaut pour contraster avec l'image */
+}
+
+header {
+ 
+    background-color: rgba(14, 4, 4, 0.7); /* Légère transparence sur chaque produit pour voir l'image */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#produits {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    background-image: url('cafe-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.produit {
+    background-color: rgba(14, 4, 4, 0.7); /* Légère transparence sur chaque produit pour voir l'image */
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.produit img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+    </STYle>
+</head>
+<body>
+
+    <!-- En-tête du site -->
+    <header>
+        <h1>La Boutique de Café</h1>
+        <nav>
+            
+        </nav>
+    </header>
+
+    <!-- Section Produits -->
+    <section id="produits">
+        <h2>Nos Produits</h2>
+        <div class="produit" id="produit1">
+            <img src="../IMAGE/téléchargement.jpeg" alt="Café Arabica">
+            <h3>Café Arabica</h3>
+            <p>Le café Arabica premium, parfait pour une tasse délicieuse.</p>
+            <p><strong>Prix: 10€</strong></p>
+            <button onclick="ajouterAuPanier('Café Arabica', 10)">Ajouter au panier</button>
+        </div>
+        <div class="produit" id="produit2">
+            <img src="../IMAGE/robu.jpeg" alt="Café Robusta">
+            <h3>Café Robusta</h3>
+            <p>Café robuste avec une saveur forte et riche.</p>
+            <p><strong>Prix: 8€</strong></p>
+            <button onclick="ajouterAuPanier('Café Robusta', 8)">Ajouter au panier</button>
+        </div>
+        <div class="produit" id="produit3">
+            <img src="../IMAGE/téléchargement (1).jpeg" alt="Café Décaféiné">
+            <h3>Café Décaféiné</h3>
+            <p>Le café décaféiné pour ceux qui préfèrent une tasse sans caféine.</p>
+            <p><strong>Prix: 12€</strong></p>
+            <button onclick="ajouterAuPanier('Café Décaféiné', 12)">Ajouter au panier</button>
+        </div>
+    </section>
+
+    <!-- Section Panier -->
+    <section id="panier">
+        <h2>Votre Panier</h2>
+        <div id="contenu-panier">
+            <p>Aucun produit dans le panier.</p>
+        </div>
+        <p id="total">Total: 0€</p>
+        <button onclick="viderPanier()">Vider le panier</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 La Boutique de Café. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // script.js
+let panier = [];
+let total = 0;
+
+function ajouterAuPanier(produit, prix) {
+    panier.push({ produit, prix });
+    total += prix;
+    afficherPanier();
+}
+
+function afficherPanier() {
+    const contenuPanier = document.getElementById('contenu-panier');
+    const totalElement = document.getElementById('total');
+
+    if (panier.length === 0) {
+        contenuPanier.innerHTML = '<p>Aucun produit dans le panier.</p>';
+        totalElement.innerHTML = 'Total: 0€';
+    } else {
+        contenuPanier.innerHTML = panier.map(item => 
+            `<p>${item.produit} - ${item.prix}€</p>`
+        ).join('');
+        totalElement.innerHTML = `Total: ${total}€`;
+    }
+}
+
+function viderPanier() {
+    panier = [];
+    total = 0;
+    afficherPanier();
+}
+
+    </script>
+</body>
+</html>
